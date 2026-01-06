@@ -327,4 +327,104 @@ html
         <p style="margin-top: 20px; opacity: 0.8;">© 2026 - Education for Everyone</p>
     </footer>
 </body>
-</html>
+</html><div class="exercise-item">5. If it _____ (rain) tomorrow, we'll cancel the picnic.</div>
+                    </div>
+                `
+            },
+            'passive-voice': {
+                title: 'Passive Voice',
+                content: `
+                    <h3>What is Passive Voice?</h3>
+                    <p>The passive voice is used when we want to emphasize the action or the receiver of the action rather than who performs it.</p>
+                    
+                    <h3>Formation</h3>
+                    <p><strong>Active:</strong> Subject + verb + object<br>
+                    <strong>Passive:</strong> Object + be + past participle (+ by + agent)</p>
+                    
+                    <div class="example-box">
+                        <strong>Active:</strong> The chef cooks the meal.<br>
+                        <strong>Passive:</strong> The meal <strong>is cooked</strong> by the chef.
+                    </div>
+
+                    <h3>Passive in Different Tenses</h3>
+                    
+                    <p><strong>Present Simple:</strong> am/is/are + past participle</p>
+                    <div class="example-box">
+                        • English <strong>is spoken</strong> in many countries.<br>
+                        • The office <strong>is cleaned</strong> every day.
+                    </div>
+
+                    <p><strong>Past Simple:</strong> was/were + past participle</p>
+                    <div class="example-box">
+                        • The house <strong>was built</strong> in 1990.<br>
+                        • The letters <strong>were sent</strong> yesterday.
+                    </div>
+
+                    <p><strong>Present Perfect:</strong> has/have been + past participle</p>
+                    <div class="example-box">
+                        • The book <strong>has been read</strong> by millions.<br>
+                        • The emails <strong>have been answered</strong>.
+                    </div>
+
+                    <p><strong>Future:</strong> will be + past participle</p>
+                    <div class="example-box">
+                        • The project <strong>will be completed</strong> next week.<br>
+                        • The results <strong>will be announced</strong> tomorrow.
+                    </div>
+
+                    <h3>When to Use Passive Voice</h3>
+                    <p>1. When the doer is unknown or unimportant</p>
+                    <div class="example-box">My car was stolen. (We don't know who stole it)</div>
+                    
+                    <p>2. When we want to emphasize the action or result</p>
+                    <div class="example-box">The Mona Lisa was painted by Leonardo da Vinci.</div>
+                    
+                    <p>3. In formal or scientific writing</p>
+                    <div class="example-box">The experiment was conducted in a laboratory.</div>
+
+                    <div class="exercise-box">
+                        <h4>Practice Exercise</h4>
+                        <p>Change these active sentences to passive:</p>
+                        <div class="exercise-item">1. Shakespeare wrote Hamlet.</div>
+                        <div class="exercise-item">2. They will open the new store next month.</div>
+                        <div class="exercise-item">3. Someone has stolen my bike.</div>
+                        <div class="exercise-item">4. They make these cars in Japan.</div>
+                        <div class="exercise-item">5. The company hired 50 new employees.</div>
+                    </div>
+                `
+            }
+        };
+
+        function showGrammarLessons() {
+            document.getElementById('mainPage').style.display = 'none';
+            document.getElementById('grammarPage').classList.add('active');
+            document.getElementById('topicsList').style.display = 'grid';
+            document.getElementById('lessonContent').classList.remove('active');
+            window.scrollTo(0, 0);
+        }
+
+        function showMainPage() {
+            document.getElementById('mainPage').style.display = 'block';
+            document.getElementById('grammarPage').classList.remove('active');
+            window.scrollTo(0, 0);
+        }
+
+        function showLesson(lessonId) {
+            const lesson = lessons[lessonId];
+            document.getElementById('topicsList').style.display = 'none';
+            document.getElementById('lessonContent').classList.add('active');
+            document.getElementById('lessonDetail').innerHTML = `
+                <h2>${lesson.title}</h2>
+                ${lesson.content}
+            `;
+            window.scrollTo(0, 0);
+        }
+
+        function showTopicsList() {
+            document.getElementById('topicsList').style.display = 'grid';
+            document.getElementById('lessonContent').classList.remove('active');
+            window.scrollTo(0, 0);
+        }
+    </script>
+</body>
+                            </html>
